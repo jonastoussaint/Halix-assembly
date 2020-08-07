@@ -1,0 +1,67 @@
+HALIX Programming Set I
+
+
+----------------------------------------------
+Due:        Thursday 9/6/2018 by 11pm
+
+Directions: Write these programs in Halix machine language.
+            Deploy your project to CIS target directory CDA3101C.
+   
+----------------------------------------------
+1. Write this program in Halix machine language.
+
+
+   read (A, B)
+   C = A + B
+   write (C)
+
+   Name your program: add2.hlx
+
+
+   
+2. Write this program, use stored value in data memory address 00.
+
+   int X = 14;
+   Y = 5 * X
+   write Y
+
+   Name your program: mult.hlx
+
+   
+3. Write this program, use stored values in data memory addresses 00 and 01.
+
+   int A = 3
+   int B = 4
+   C = A*A + A*B - B
+   write C
+
+
+   Name your program: algebra.hlx
+
+
+4. (bonus) Write this program.
+   ----------------------------------------------
+   Due:        Sept 7, 2010 by 11pm 
+   ----------------------------------------------
+
+   Write a LOOP to generate the values 1, 2, 3, 4, 5.
+
+
+   Name your program: count.hlx
+
+
+
+    ============= A LITTLE HELP ========
+
+    int LIMIT = 5
+    int COUNT = 0
+
+    NEXT: 
+    if (LIMIT == COUNT) goto DONE
+
+    COUNT = COUNT + 1
+    write COUNT
+    goto NEXT
+
+    DONE:
+

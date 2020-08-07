@@ -1,0 +1,76 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  2403  SETI   03
+  01  0400  STORE  00
+  02  1300  CLEAR  00
+  03  2404  SETI   04
+  04  0401  STORE  01
+  05  1300  CLEAR  00
+  06  0300  LOAD   00
+  07  0700  MULT   00
+  08  0402  STORE  02
+  09  1300  CLEAR  00
+  10  0300  LOAD   00
+  11  0701  MULT   01
+  12  0502  ADD    02
+  13  0601  SUB    01
+  14  0403  STORE  03
+  15  0203  WRITE  03
+  16  9900  HALT
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0004
+  01  0017
+  02  169126432
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2018, ver. 11
+Program: algebra.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  2403  SETI      03    0003
+  01  0400  STORE     00    0003
+  02  1300  CLEAR   0003    0000
+  03  2404  SETI      04    0004
+  04  0401  STORE     01    0004
+  05  1300  CLEAR   0004    0000
+  06  0300  LOAD      00    0003
+  07  0700  MULT      00    0009
+  08  0402  STORE     02    0009
+  09  1300  CLEAR   0009    0000
+  10  0300  LOAD      00    0003
+  11  0701  MULT      01    0012
+  12  0502  ADD       02    0021
+  13  0601  SUB       01    0017
+  14  0403  STORE     03    0017
+  15  0203  WRITE     03 ==>0017
+  16  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: algebra.hlx
+16 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0003
+  01  0004
+  02  0009

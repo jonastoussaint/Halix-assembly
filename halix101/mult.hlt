@@ -1,0 +1,54 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  2414  SETI   14
+  01  0400  STORE  00
+  02  1300  CLEAR  00
+  03  2405  SETI   05
+  04  0700  MULT   00
+  05  0401  STORE  01
+  06  0201  WRITE  01
+  07  9900  HALT
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0014
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2018, ver. 11
+Program: mult.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  2414  SETI      14    0014
+  01  0400  STORE     00    0014
+  02  1300  CLEAR   0014    0000
+  03  2405  SETI      05    0005
+  04  0700  MULT      00    0070
+  05  0401  STORE     01    0070
+  06  0201  WRITE     01 ==>0070
+  07  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: mult.hlx
+7 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0014
